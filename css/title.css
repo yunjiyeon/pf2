@@ -1,0 +1,177 @@
+#title {
+    height: 100%;
+    background-image:url(../img/section01_bg.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*! height: 700px; */
+    min-height: 700px;
+    position: relative;  
+    }
+
+#title span{
+    position: absolute;
+    bottom: 20px;
+}
+
+#title span::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    border: 2px solid;
+    border-top: transparent;
+    border-left:transparent;
+    color:grey;
+    margin: 0 auto;
+    transform: rotate(45deg);
+    margin-bottom: 10px;
+    animation-name: scrollUpDown;
+    animation-duration: 600ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes scrollUpDown{
+    from{
+        transform: translateY(0px) rotate(45deg);
+    }
+    to{
+        transform: translateY(-10px) rotate(45deg);
+    }
+}
+
+#title span::after{
+    content: "Scroll";
+    color: grey;
+}
+
+#title::before{
+    content: "";
+    background-image: url(../img/sec01_logo.png);
+    background-size: cover;
+    width: 1508px;
+    height: 388px;
+    margin-top: 50px;
+    animation-name: fadeIn; /*애니메이션 이름*/
+    animation-duration: 3000ms; /* 애니메이션 시간 */
+    /*! animation-iteration-count: 3; */ /* 애니메이션 반복 횟수 */
+    /*! animation-direction: alternate; */ /*애니메이션 진행방향 : 왔다 갔다*/
+}
+
+
+
+
+
+@keyframes fadeIn{
+    0%{ /*처음 상태*/
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    70%{
+        transform: scale(1.2);
+    }
+    100%{ /*끝 상태*/
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+    #title form.search { 
+      width: 1020px;
+      height: 80px;
+      background: white;
+      border-radius: 40px;
+      box-shadow: 2px 0px 10px #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 20px;
+      padding-left: 80px;
+      box-sizing: border-box;
+      position: relative;
+      animation-name: moveLeft;
+      animation-duration: 1s;
+      transform: translateX(70px);
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+      animation-direction: alternate;
+      animation-iteration-count: 1;
+        
+    }
+
+@keyframes moveLeft{
+    0%{
+       transform: translateX(70px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+    #title form.search::before{
+        content:"";
+        background-image: url(../img/search-outline.svg);
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        left: 40px;
+    }
+    #title form.search input {
+     border: none;
+     line-height: 1.6;
+     font-size: 16px;
+     width: 690px;
+     font-weight: 900;
+    }
+
+    #title form.search input:focus{
+     outline: none;
+    }
+
+    #title form.search button {
+     
+    border: none;
+    background-color: #e62f28;
+    color: white;
+    width: 200px;
+    line-height: 4;
+    border-radius: calc(29.3333px / 1);
+    font-size: 14px;
+    cursor: pointer;
+        
+    font-weight: 600;
+    }
+    #title h2 {
+      
+    }
+    #title ul.hash {
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+    column-gap: 40px;
+    }
+
+   #title ul.hash li {
+       
+}
+
+    #title ul.hash li a {
+        border: 1px solid #dee2e6;
+        border-radius: calc(100px / 1);
+        text-align: center;
+        padding: 10px 40px;
+        font-size: 20px;
+        font-family: 'Dongle', sans-seri;
+        display: block
+    }
+
+
+    #title ul.hash li a:hover{
+    color:#4f8de5;
+    border: 1px solid #4f8de5;
+    }
